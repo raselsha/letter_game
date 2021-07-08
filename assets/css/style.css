@@ -80,8 +80,11 @@ h1,h2,h3,h4,h5,h6{
 .middle-side h1{
     font-size:45px;
     padding:0px 0;
-    text-align: center;
     color:#fff;
+}
+.middle-side h1 sub{
+    font-size:20px;
+    color: #fff;
 }
 .right-side h1{
     font-size:45px;
@@ -100,6 +103,9 @@ h1,h2,h3,h4,h5,h6{
 .result-letters{
     width: 50%;
     margin: auto;
+}
+.result-letters h1 span{
+    border-bottom: 1px dashed #fff;
 }
 .result-joined{
     width: 75%;
@@ -123,15 +129,18 @@ h1,h2,h3,h4,h5,h6{
 .sentence span{
     display: inline-block;
     border: 2px solid  #fff;
-    padding:5px 30px;
-    border-radius:10px;
+    padding:5px 10px;
+    border-radius:10px 0px 0px 10px;
+    border-right: 0;
 }
 .sentence .arrow{
   background:#00b050 !important;
-  border-width:2px solid;
-  border-radius:100px;
-  border-color:#ffff00 !important;
-  position: relative;
+  border:2px solid #ffff00 !important;
+  border-radius: 0 10px 10px 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Noto Serif', serif;
 }
 
     
@@ -180,7 +189,8 @@ h1,h2,h3,h4,h5,h6{
         max-width:500px;
     }
     .left-side{
-        padding:5px;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
     }
     .left-side h1 {
         font-size:50px;
@@ -189,12 +199,21 @@ h1,h2,h3,h4,h5,h6{
         font-size:20px;
     }
     .right-side{
-        padding:5px;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
     }
     .right-side h1 {
         font-size:50px;
     }
     .right-side h1 sub{
         font-size:20px;
+    }
+    .sentence span{
+        padding:5px 0px;
+        border-radius:10px;
+        border: 2px solid  #fff;
+    }
+    .sentence .arrow{
+        border-radius:10px;
     }
 }
