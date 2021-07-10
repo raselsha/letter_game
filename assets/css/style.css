@@ -100,7 +100,8 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
 }
 .middle-side h2{
-    font-size:50px;
+    font-size:40px;
+    padding: 5px 0;
     margin: 0;
     color: #fff;
 }
@@ -121,7 +122,9 @@ h1,h2,h3,h4,h5,h6{
 .right-side h1 sub{
     font-size:20px;
 }
-.result{}
+.result{
+
+}
 .result div[class*='result-']{
     border-radius:10px !important;
     margin-top:5px;
@@ -162,7 +165,7 @@ h1,h2,h3,h4,h5,h6{
     border-radius:10px 0px 0px 10px;
     border-right: 0;
 }
-.sentence .arrow{
+.sentence .next{
   background:#00b050 !important;
   border:2px solid #ffff00 !important;
   border-radius: 0 10px 10px 0;
