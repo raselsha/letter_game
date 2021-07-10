@@ -40,9 +40,6 @@ function moveTo(element,id){
     var top = src.y;
     letter.style.transition = 'all 1s ease-in-out';
     letter.style.transform = 'translate('+(dest.x-left)+'px,'+(dest.y-src.y)+'px)';
-    letter.style.padding = 0;
-    letter.style.margin = 0;
-    letter.style.fontSize = '45px';
     console.log(left);
     setTimeout(function(){
         resetTo(letter,id); // move letter to original position

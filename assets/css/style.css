@@ -67,9 +67,17 @@ h1,h2,h3,h4,h5,h6{
     height:38px;
 }
 /*****************content*****************/
+.left-side .cell{
+    height:78px;
+    padding-top:8px;
+}
 .left-side h1{
-    font-size: 49px;
-    padding: 4px 0;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    font-size:50px;
     text-align: center;
     color:var(--bs-gray);
 }
@@ -78,7 +86,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .middle-side h1{
-    font-size:45px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    font-size:50px;
     padding:0px 0;
     color:#fff;
 }
@@ -86,8 +99,21 @@ h1,h2,h3,h4,h5,h6{
     font-size:20px;
     color: #fff;
 }
+.middle-side h2{
+    font-size:50px;
+    margin: 0;
+    color: #fff;
+}
+.right-side .cell{
+    height:65px;
+}
 .right-side h1{
-    font-size:45px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    font-size:50px;
     padding:0;
     text-align: center;
     color:var(--bs-gray);
@@ -174,16 +200,21 @@ h1,h2,h3,h4,h5,h6{
     }
     .left-side h1 {
         font-size: 40px;
-        padding: 3px 0;
+        width: 40px;
     }
     .left-side h1 sub{
         font-size:15px;
+    }
+    .middle-side h2{
+        font-size:40px;
+        color: #fff;
     }
     .right-side{
         padding-left: 0;
     }
     .right-side h1 {
         font-size: 36px;
+        width: 40px;
     }
     .right-side h1 sub{
         font-size:15px;
@@ -200,9 +231,14 @@ h1,h2,h3,h4,h5,h6{
     }
     .left-side h1 {
         font-size:50px;
+        width:60px;
     }
     .left-side h1 sub{
         font-size:20px;
+    }
+    .middle-side h1 {
+        font-size:50px;
+        width:60px;
     }
     .right-side{
         padding-right: calc(var(--bs-gutter-x) * .5);
@@ -210,6 +246,7 @@ h1,h2,h3,h4,h5,h6{
     }
     .right-side h1 {
         font-size:50px;
+        width:60px;
     }
     .right-side h1 sub{
         font-size:20px;
