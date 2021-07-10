@@ -7,6 +7,14 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Noto Serif', serif;
     font-weight: bold;
 }
+table {
+  table-layout: fixed ;
+  width: 100% ;
+}
+td {
+  width: 25% ;
+  padding:10px 0 !important;
+}
 
 .pointer{
     cursor: pointer;
@@ -68,32 +76,34 @@ h1,h2,h3,h4,h5,h6{
 }
 /*****************content*****************/
 .left-side h1{
-    font-size: 49px;
-    padding: 4px 0;
+    font-size:40px;
+    padding:5px 0;
+    margin: 0;
     text-align: center;
     color:var(--bs-gray);
 }
 .left-side h1 sub{
-    font-size:20px;
+    font-size:15px;
 }
 
 .middle-side h1{
-    font-size:45px;
-    padding:0px 0;
-    color:#fff;
+    font-size:40px;
+    padding:5px 0;
+    margin: 0;
+    text-align: center;
 }
 .middle-side h1 sub{
-    font-size:20px;
-    color: #fff;
+    font-size:15px;
 }
 .right-side h1{
-    font-size:45px;
+    font-size:40px;
     padding:0;
+    margin: 0;
     text-align: center;
     color:var(--bs-gray);
 }
 .right-side h1 sub{
-    font-size:20px;
+    font-size:15px;
 }
 .result{}
 .result div[class*='result-']{
@@ -104,8 +114,11 @@ h1,h2,h3,h4,h5,h6{
     width: 50%;
     margin: auto;
 }
-.result-letters h1 span{
-    border-bottom: 1px dashed #fff;
+.result-dot{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 .result-joined{
     width: 75%;
@@ -157,6 +170,9 @@ h1,h2,h3,h4,h5,h6{
     border-width: 0 0 1px;
     font-family: 'Inter', sans-serif;
 }
+.modal-backdrop.show {
+    opacity: .8;
+}
 /********************************/
 
 @media (max-width:991px){
@@ -166,47 +182,12 @@ h1,h2,h3,h4,h5,h6{
     .left-side{
         padding-right:0;
     }
-    .left-side h1 {
-        font-size: 40px;
-        padding: 3px 0;
-    }
-    .left-side h1 sub{
-        font-size:15px;
-    }
-    .right-side{
-        padding-left: 0;
-    }
-    .right-side h1 {
-        font-size: 36px;
-    }
-    .right-side h1 sub{
-        font-size:15px;
-    }
+    
 }
 
 @media (max-width:767px){
     .container-lg{
         max-width:500px;
-    }
-    .left-side{
-        padding-right: calc(var(--bs-gutter-x) * .5);
-        padding-left: calc(var(--bs-gutter-x) * .5);
-    }
-    .left-side h1 {
-        font-size:50px;
-    }
-    .left-side h1 sub{
-        font-size:20px;
-    }
-    .right-side{
-        padding-right: calc(var(--bs-gutter-x) * .5);
-        padding-left: calc(var(--bs-gutter-x) * .5);
-    }
-    .right-side h1 {
-        font-size:50px;
-    }
-    .right-side h1 sub{
-        font-size:20px;
     }
     .sentence span{
         padding:5px 0px;
