@@ -104,8 +104,11 @@ h1,h2,h3,h4,h5,h6{
     width: 50%;
     margin: auto;
 }
-.result-letters h1 span{
-    border-bottom: 1px dashed #fff;
+.result-dot{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 .result-joined{
     width: 75%;
@@ -156,6 +159,9 @@ h1,h2,h3,h4,h5,h6{
 .list-group-flush > .list-group-item {
     border-width: 0 0 1px;
     font-family: 'Inter', sans-serif;
+}
+.modal-backdrop.show {
+    opacity: .8;
 }
 /********************************/
 
