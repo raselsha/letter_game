@@ -1,4 +1,4 @@
-var tableA=['a1','a2','a3'];
+var tableA=['a1','a2'];
 var tableB=['b1','b2','b3'];
 var joinLetters=['j1','j2','j3','j4','j5','j6'];
 var words={
