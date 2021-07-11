@@ -233,10 +233,13 @@ function stopVideo(video){
 	video.pause();
 }
 
-function data() {
-	var i = 0;
-	for(i=0; i<570; i++){
-	  document.write("\'sentence "+i+"\',");
-	}
-	window.location.reload();
-}
+
+	// window.location.reload();
+	// var txt = 's';
+	// txt = String(txt);
+	// createData(txt,570);
+	// function createData(txt,count){
+	// 	for(var i=1; i<=count; i++){
+	// 	  document.write("'"+txt+i+"',");
+	// 	}
+	// }
