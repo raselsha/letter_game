@@ -124,20 +124,20 @@
                 <div class="row my-1 mt-md-5 mt-lg-5 py-1 pt-md-5 pt-lg-5 ">
                   <div id="result-box" class="result col-12 mr-auto text-center">
 
-                    <div id="result-yellow" class="result-letters border border-2 rounded border-yellow position-relative ">
-                      <div id="result-letters" class="row gx-2">
-                        <div class="col-6 ">
-                          <h1 id="result-left" class="text-green float-end invisible">a</h1>
+                    <div id="result-yellow" class="result-letters border border-2 rounded border-yellow position-relative">
+                      <div id="result-letters" class="row g-0">
+                        <div class="col-6 position-relative">
+                          <h1 id="result-left" class="result-left text-green float-end invisible ">a</h1>
                         </div>
-                        <div class="col-6">
-                          <h1 id="result-right" class="text-green float-start invisible">x<sub>1</sub></h1>
+                        <div class="col-6 position-relative">
+                          <h1 id="result-right" class="result-right text-green float-start invisible">x<sub>1</sub></h1>
                         </div>
-                      </div> 
+                      </div>
                       <div id="result-dot" class="row position-absolute result-dot pt-2">
                         <div class="col-12 ">
                           <h4 class="text-white float-none">......</h4>
                         </div>
-                      </div>
+                      </div> 
                     </div>
                     <img id="arrow-1" src="assets/img/down-arrow.png" alt="arrow" class="invisible">
 
@@ -269,8 +269,8 @@
               
               <!-- sentence below -->
               <div class="col-12 mt-2 order-2 order-md-3">
-                <h4 class="sentence text-center">
-                  <span id="result-sentence" class="mb-2">Sentences will be here Sentences will be here Sentences will be here will be here </span><button class="next">next</button>
+                <h4 id="sentence" class="sentence text-center visible">
+                  <span id="result-sentence" class="mb-2">(-----)<strong></strong></span><button id="next" class="next" onclick="next()">next</button>
                 </h4>
               </div>
               

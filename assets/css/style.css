@@ -105,6 +105,9 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
     color: #fff;
 }
+.middle-side h2 sub{
+    font-size:20px;
+}
 .right-side .cell{
     height:65px;
 }
@@ -138,6 +141,12 @@ h1,h2,h3,h4,h5,h6{
     left: 0;
     right: 0;
     z-index: -1;
+}
+.result-left{
+    margin-right:-10px !important;
+}
+.result-right{
+    margin-left:-10px !important;
 }
 .result-joined{
     width: 75%;
