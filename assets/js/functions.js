@@ -42,6 +42,8 @@ function resetLetterPosition(id) {
 	var letter = document.getElementById(id);
 
     if (tableA[i]==id) {
+    	resultDot.classList.remove('visible');
+    	resultDot.classList.add('invisible');
     	resultLeft.innerHTML=letter.innerHTML;
     	resultLeft.classList.remove('invisible');
     	resultLeft.classList.add('visible');
@@ -92,8 +94,7 @@ function displaySentence() {
 }
 
 function sectionEnable() {
-	resultDot.classList.remove('visible');
-	resultDot.classList.add('invisible');
+	
 	arrow1.classList.remove('invisible');
   arrow1.classList.add('visible');
 	resultOrange.classList.remove('invisible');
