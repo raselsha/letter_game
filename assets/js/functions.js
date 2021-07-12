@@ -251,12 +251,3 @@ function stopVideo(video){
 }
 
 
-	// window.location.reload();
-	// var txt = 's';
-	// txt = String(txt);
-	// createData(txt,570);
-	// function createData(txt,count){
-	// 	for(var i=1; i<=count; i++){
-	// 	  document.write("'"+txt+i+"',");
-	// 	}
-	// }
