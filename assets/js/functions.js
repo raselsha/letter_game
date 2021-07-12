@@ -48,7 +48,7 @@ function resetLetterPosition(id) {
     	showJoinLetters();
     	rePlay(resultLeft.id,id);
     	makeActive(tableB[j]);
-	}
+		}
 	if (tableB[j]==id) {
 
 		resultRight.innerHTML=letter.innerHTML;
@@ -206,7 +206,7 @@ function playSound(id) {
 function rePlay(result,id){
 	var h1 = document.getElementById(result);
 	var att = document.createAttribute("onclick");
-	att.value = "main('"+id+"')";
+	att.value = "playSound('"+id+"')";
 	h1.setAttributeNode(att);
 	h1.classList.add('text-green','pointer');
 	subTag = h1.getElementsByTagName('sub')[0];
