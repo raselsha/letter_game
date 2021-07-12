@@ -1,5 +1,4 @@
 
-
 var resultBox = document.getElementById('result-box');
 var resultYellow = document.getElementById('result-yellow');
 var resultLetters = document.getElementById('result-letters');
@@ -12,7 +11,6 @@ var resultGreen = document.getElementById('result-green');
 var resultWords = document.getElementById('result-words');
 var resultSentence = document.getElementById('result-sentence');
 var sentence = document.getElementById('sentence');
-
 var arrow1 = document.getElementById('arrow-1');
 var arrow2 = document.getElementById('arrow-2');
 var arrow3 = document.getElementById('arrow-3');
@@ -27,7 +25,6 @@ var subTag;
 
 if(i==0 || j==0){
   makeActive(tableA[i]);
-  makeActive(tableB[j]);
 }
 
 function main(id) {
@@ -50,6 +47,7 @@ function resetLetterPosition(id) {
     	makeInactive(id); // table a, current letter inactive
     	showJoinLetters();
     	rePlay(resultLeft.id,id);
+    	makeActive(tableB[j]);
 	}
 	if (tableB[j]==id) {
 
@@ -111,15 +109,19 @@ function sectionEnable() {
 
 function sectionDisable() {
 	arrow1.classList.remove('visible');
-    arrow1.classList.add('invisible');
+  arrow1.classList.add('invisible');
 	resultOrange.classList.remove('visible');
 	resultOrange.classList.add('invisible');
-	arrow2.classList.remove('visible');
-	arrow2.classList.add('invisible');
-    resultGreen.classList.remove('visible');
+  resultGreen.classList.remove('visible');
 	resultGreen.classList.add('invisible');
 	arrow2.classList.remove('visible');
 	arrow2.classList.add('invisible');
+	arrow3.classList.remove('visible');
+	arrow3.classList.add('invisible');
+	sentence.classList.remove('visible');
+	sentence.classList.add('invisible');
+	resultDot.classList.remove('invisible');
+	resultDot.classList.add('visible');
 }
 
 function next(){
@@ -128,6 +130,7 @@ function next(){
 	l++; // increment for next joined letters
 	w++; // increment for next words 
 	s++; // increment for next sentence 
+	
 	if (j==tableB.length) {
 		j=0;
 		i++;
@@ -146,7 +149,13 @@ function next(){
 		}
 	    
 	}
-	makeActive(tableB[j]);
+	resultLeft.classList.remove('visible');
+  resultLeft.classList.add('invisible');
+  resultRight.classList.remove('visible');
+  resultRight.classList.add('invisible');
+  sectionDisable();
+  makeActive(tableA[i]);
+
 }
 
 function moveToFly(id){
@@ -209,7 +218,8 @@ function makeActive(id){
 	var att = document.createAttribute("onclick");
 	att.value = "main('"+id+"')";
 	h1.setAttributeNode(att);
-	h1.classList.add('text-green','pointer');
+	h1.classList.remove('invisible');
+	h1.classList.add('text-green','pointer','visible');
 	subTag = h1.getElementsByTagName('sub')[0];
 	subTag.classList.add('text-white');
 }
@@ -217,10 +227,10 @@ function makeActive(id){
 function makeInactive(id){
 	var letter = document.getElementById(id);
 	letter.classList.remove('visible');
-    letter.classList.add('invisible'); 
-    letter.removeAttribute('style');
-    letter.classList.remove('pointer');
-    letter.removeAttribute("onclick");
+  letter.classList.add('invisible'); 
+  letter.removeAttribute('style');
+  letter.classList.remove('pointer');
+  letter.removeAttribute("onclick");
 }
 
 function resetTable(table){
@@ -231,7 +241,7 @@ function resetTable(table){
 		reset.classList.remove('invisible','text-green');
 		reset.classList.add('visible',);
 	}
-	makeActive(table[0]);
+	
 }
 
 // function for stop video on close modal
