@@ -1,14 +1,4 @@
-var tableA=['a1','a2'];
-var tableB=['b1','b2','b3'];
-var joinLetters=['j1','j2','j3','j4','j5','j6'];
-var words={
-			text:['word 1','word 2','word 3','word 4','word 5','word 6',],
-			sound:['w1','w2','w3','w4','w5','w6'],
-		};
-var sentences={
-			text:['sentence <strong></strong> 1','<strong></strong> sentence 2','sentence 3 <strong></strong>','sentence <strong></strong> 4','<strong></strong> sentence 5','sentence 6 <strong></strong>',],
-			sound:['s1','s2','s3','s4','s5','s6']
-		};
+
 
 var resultBox = document.getElementById('result-box');
 var resultYellow = document.getElementById('result-yellow');
@@ -57,6 +47,7 @@ function resetLetterPosition(id) {
     	resultLeft.classList.add('visible');
     	makeInactive(id); // table a, current letter inactive
     	showJoinLetters();
+    	rePlay(resultLeft.id,id);
 	}
 	if (tableB[j]==id) {
 
@@ -64,7 +55,7 @@ function resetLetterPosition(id) {
 		resultRight.classList.remove('invisible');
 		resultRight.classList.add('visible');
 		makeInactive(id); // table b, current letter inactive
-		// makeActive(tableB[j]); //table B next letter will be active
+		rePlay(resultRight.id,id);
 		sectionEnable();
 		showJoinLetters();
 		displayWords();
@@ -91,7 +82,7 @@ function displayWords() {
 
 function displaySentence() {
 	resultSentence.innerHTML = sentences.text[s];
-	var word = resultSentence.getElementsByTagName('strong')[0];
+	var word = resultSentence.getElementsByTagName('b')[0];
 	word.innerHTML = words.text[w];
 	word.classList.add('text-green');
 	var att = document.createAttribute("onclick");
@@ -131,6 +122,7 @@ function sectionDisable() {
 }
 
 function next(){
+	playSound('next');
 	j++; // increment for next element in right table
 	l++; // increment for next joined letters
 	w++; // increment for next words 
@@ -194,7 +186,21 @@ function playSound(id) {
 		audio.src = 'assets/audio/sentences/'+id+'.mp3';
 		audio.play();
 	}
+	if ('next'==id) {
+		audio.src = 'assets/audio/'+id+'.mp3';
+		audio.play();
+	}
 
+}
+
+function rePlay(result,id){
+	var h1 = document.getElementById(result);
+	var att = document.createAttribute("onclick");
+	att.value = "main('"+id+"')";
+	h1.setAttributeNode(att);
+	h1.classList.add('text-green','pointer');
+	subTag = h1.getElementsByTagName('sub')[0];
+	subTag.classList.add('text-white');
 }
 
 function makeActive(id){
